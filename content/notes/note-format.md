@@ -1,6 +1,8 @@
 ---
 date: 2019-06-02
 tags: ['note', 'project']
+draft: true
+hide: true
 ---
 
 **Note card** - the type of content that is fully displayed in the feed of the site - it is suitable for short notes (like this one), videos, podcasts, slides, etc.
