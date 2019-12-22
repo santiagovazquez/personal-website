@@ -1,6 +1,8 @@
 ---
 title: Playing with React Native and a GoPro Cam
 date: 2019-05-01
+description: Learn how to use a React Native and a GoPro Cam to save your best moments in amateur sports.
+
 tags: ['post', 'react-native', 'go-pro', 'sports', 'mobile']
 ---
 
