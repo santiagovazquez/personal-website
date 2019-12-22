@@ -1,14 +1,14 @@
 ---
-title: Playing with React Native and My GoPro Cam
+title: Playing with React Native and a GoPro Cam
 date: 2019-05-01
 tags: ['post']
 ---
 
-What if we could save our best moments in amateur sports?  It would be awesome! 
+Wouldn't it be amazing if we could save our best moments in amateur sports? Yes, it would!
 
-So imagine that you're playing soccer with friends and take your GoPro Cam with you. If you record everything it would be tedious to find and get the highlights. 
+Imagine you're playing soccer with friends and take your GoPro Cam with you. It'll be tedious to record the whole thing and extract the highlights afterwards. 
 
-What if we have a button we could press when a goal happens and last 15 seconds get saved somewhat.
+But what if we could have a button to press when a goal happens and get only the last 15 seconds of video on your phone.
 
 It's not a new idea. Some amateur leagues are doing it and it's awesome:
 
