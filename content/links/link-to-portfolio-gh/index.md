@@ -1,5 +1,5 @@
 ---
-title: 'This Portfolio on Github'
+title: 'This Website on Github'
 cover: ./image.png
 date: 2019-12-21
 link: https://github.com/santiagovazquez/personal-website

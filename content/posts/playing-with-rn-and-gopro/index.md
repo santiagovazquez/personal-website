@@ -1,28 +1,33 @@
 ---
 title: Playing with React Native and a GoPro Cam
 date: 2019-05-01
-tags: ['post']
+tags: ['post', 'react-native', 'go-pro', 'sports', 'mobile']
 ---
 
-### Wouldn't it be amazing if we could save our best moments in amateur sports? Yes, it would!
+### Saving our best moments in amateur sports 
  
-Image you're playing soccer with friends and take your GoPro Cam with you. A video of the whole thing might never get out of your cam.  
+Our first try would be bringing a GoPro Cam to a soccer match with friends. However it involves **too much work** to do it frequently.
 
-Why is that? **It's tedious!** You have to download a huge video to your computer and search thought it for the highlights. **What if we could have all the highlights on your mobile right after the match?**
+You have to download a full-length video of the match to your computer and search thought it for highlights. 
 
-The idea is simple: hit a button every time something interesting happen on the game. The last 15 seconds before the button gets hit will be downloaded to your phone.
+It would be awesome to have all the hightlights on my phone right after the match.
 
-It's not a new idea. Some amateur leagues are doing it and it's awesome:
+**What if we press a button every time something interesting happens and save the last 15 seconds of action?**
+
+
+### Not entirely a new idea
+
+Some amateur leagues are doing it and it's awesome:
 
 <Embed
   src="https://www.youtube.com/embed/ShQQIwEjPBM"
 />
 
-We can build it by writing some React Native code and using an Old GoPro camera.  
+We will build our button app and connect it with a GoPro Cam by writing some React Native code.  
 
 ### Learn about GoPro capabilities 
 
-I started by experimenting with my GoPro Cam, a Silver Hero 3. It has a Wifi Spot which you can send commands over curl (see commands for other models on this [repo](https://github.com/KonradIT/goprowifihack
+I started by experimenting with my GoPro Cam, a Silver Hero 3. It has a Wifi Spot which you can send commands over curl (see all commands for this or other models on this [repo](https://github.com/KonradIT/goprowifihack
                                                                                                                                                                )). 
 For example:
 ```
@@ -55,12 +60,14 @@ ffmpeg -sseof -15 -i "$VIDEO_URL" -c copy output.mp4
 
 So far I gave you every terminal command to build the app. Although we would like to have a mobile app to run those commands and not a computer.
 
-### Mobile App
+### Button Mobile App
 
 To build the app, I chose React Native because it's really simple to use and we could use fetch API to execute most of the previous commands. 
 
-The only command which isn't available on mobile is the one to get only the last 15 seconds of the current video because it depends on ffmpeg. I use an open source library called [react-native-video-processing](https://github.com/santiagovazquez/react-native-video-processing) and made changes on top of it (to be able to trim network files).
+The only command which isn't available from mobile is the one to get only the last 15 seconds of the current video because it depends on ffmpeg. I use an open source library called [react-native-video-processing](https://github.com/santiagovazquez/react-native-video-processing) and made changes on top of it (to be able to trim network files).
 
 You can see the whole code of my mobile app on [Github](https://github.com/santiagovazquez/GoProGoals).
 
+![app-capture](./capture.jpeg)
 
+I gave a lighting talk of this project on MeetupJS. See slides [here](https://santiagovazquez.github.io/gopro_lighting_talk/) (in Spanish). Also some recording examples are uploaded to my [YouTube Account](https://www.youtube.com/watch?v=lmBAo_DPbUE&list=PLE8Be1z3NnYjlIO-RfyEWX96b0Cmx0zLE).
