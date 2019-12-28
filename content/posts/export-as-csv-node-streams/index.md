@@ -1,24 +1,24 @@
 ---
-title: Export DB Data as CSV with Node streams, Gzip, Knex and AWS S3
+title: Export DB Data as CSV with Node streams and Lambdas
 date: 2019-07-01
 description: Use NodeJS streams to upload CSV files to AWS S3.
-tags: ['post', 'streams', 'node', 'aws-s3', 'knex']
+tags: ['post', 'javascript', 'streams', 'node', 'aws-s3', 'knex']
 ---
 
 In webapps, It's pretty common to be asked to have an **export as CSV** functionality. 
 
 Let's be honest. It's **not the best feature to write**. It would be nice to get it done right away. 
 
-I will share a way to do it quickly by: 
+I will share a quick way to do it by: 
  - using **Javascript** (maybe AWS Lambdas)
  - using **NodeJS streams**
  - using **AWS S3** to save the file
 
 ### Why NodeJS Streams?
 
-When we export db data, It's not possible to have all query results in memory and save them into a file. It's likely to be ran out of memory.  
+When we export db data, It's possible to be ran away of memory if we keep results in memory and save them into a file. 
 
-Here is where **NodeJS Streams** comes into play. 
+Here is where **NodeJS Streams** come in handy. 
 
 > Streams are a powerful way of piping data through as it comes in, rather than all at once. You can read more about streams [here at substack's stream handbook](https://github.com/substack/stream-handbook).
 
@@ -26,7 +26,7 @@ See official docs [here](https://nodejs.org/api/stream.html).
 
 ### DB Query
 
-For the query, We will use [Knex.js](https://knexjs.org/), a pretty simple but powerful SQL query builder. It comes with built-in stream support.
+For building and executing the db query, We will use [Knex.js](https://knexjs.org/), a pretty simple but powerful SQL query builder. It comes with built-in stream support.
 
 Let's write some query:
 ```js
@@ -123,5 +123,3 @@ const getExportFileLink = (organizationId) => {
  - AWS Lambdas is awesome to run code like this. Be careful with concurrency. You do not want to reach maximum pool size on your db.
  - In my production code, I have a queue with task definitions and some lambda is consuming and executing elements from the queue.  
  - Also, my code ends sending an email with the link (obviously!).
-
-If you have any questions, please contact me on [twitter](https://twitter.com/savazq).

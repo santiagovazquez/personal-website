@@ -1,7 +1,7 @@
 ---
 title: 'GoProGoals | An App to record your goals'
 cover: ./capture.jpeg
-date: 2019-12-20
+date: 2018-12-20
 link: https://github.com/santiagovazquez/GoProGoals
 tags: ['link', 'project']
 ---

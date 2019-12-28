@@ -1,7 +1,7 @@
 ---
 title: 'Alentame | Management Platform for Soccer Leagues'
 cover: ./alentame.png
-date: 2015-01-02
+date: 2019-01-02
 link: https://alenta.me
 tags: ['link', 'project']
 ---
